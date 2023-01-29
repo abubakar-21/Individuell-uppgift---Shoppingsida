@@ -75,12 +75,6 @@ products.forEach(function(product) {
         // var productId = cartProducts.getAttribute("data-product-id");
         // hämta tidigare sparade data från LocalStorage
         var cart = JSON.parse(localStorage.getItem("cart")) || [];
-        // var existingProduct = cart.find(p => p.id === cartProduct.id);
-        // if (existingProduct) {
-        //     existingProduct.amount++;
-        // } else {
-        //     cart.push({id: cartProduct, amount: 1});
-        // }
 
         var isExist = false;
         for(var i=0;i<cart.length;i++){
@@ -100,18 +94,6 @@ products.forEach(function(product) {
 
 
     });
-
-    // var submitBtn = productDiv.querySelector(".submit-btn");
-    // submitBtn.addEventListener("click", function() {
-    //     // var amountInput = productDiv.querySelector(".product-amount");
-    //     var amount = input.value;
-    //     cartCount.textContent++;
-    //     cartCount.style.display = "block";
-    //     var totalProductPrice = product.price * amount;
-    //     var cartProduct = {...product, amount: amount, totalProductPrice: totalProductPrice};
-    //     cartProducts.push(cartProduct);
-    //     console.log(cartProducts);
-    // });
 
     // hämta knappar och input-element
     var minusBtn = productDiv.querySelector(".minus-btn");
@@ -143,20 +125,4 @@ cartCount.style.display = "none";
 
 
 cartCount.style.display = "block";
-cartCount.textContent = "0"; // exempel på att uppdatera värdet i spannaren
-
-
-// document.querySelectorAll('.add-to-cart').forEach(function(button) {
-//     button.addEventListener('click', function(event) {
-//         // hämta produkt från knappen
-//         var product = event.target.parentNode;
-//         var productId = product.getAttribute("data-product-id");
-//         // hämta tidigare sparade data från LocalStorage
-//         var cart = JSON.parse(localStorage.getItem("cart")) || [];
-//         // lägg till produkten i arrayen
-//         cart.push(productId);
-//         // spara arrayen till LocalStorage
-//         localStorage.setItem("cart", JSON.stringify(cart));
-//     });
-// });
-
+cartCount.textContent = "0"; 

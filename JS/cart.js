@@ -1,28 +1,3 @@
-// var cartList = document.getElementById("cart-list");
-// var totalPrice = 0;
-
-// cartProducts.forEach(function(product) {
-//     var cartProductDiv = document.createElement("div");
-//     cartProductDiv.classList.add("cart-product");
-//     cartProductDiv.innerHTML = `
-//         <img src="${product.image}" alt="${product.name}">
-//         <div class="cart-product-info">
-//             <h3>${product.name}</h3>
-//             <p>Quantity: ${product.amount}</p>
-//             <p>Price: $${product.price}</p>
-//             <p>Total: $${product.price * product.amount}</p>
-//             <button class="remove-btn">Remove</button>
-//         </div>
-//     `;
-//     cartList.appendChild(cartProductDiv);
-//     totalPrice += product.price * product.amount;
-// });
-
-
-// document.getElementById("total-price").textContent = `Total Price: $${totalPrice}`;
-
-
-
 // hämta produkterna från LocalStorage
 var cart = JSON.parse(localStorage.getItem("cart")) || [];
 console.log(cart);
